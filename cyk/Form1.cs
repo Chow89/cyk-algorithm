@@ -20,20 +20,6 @@ namespace WindowsFormsApplication1
 
         private void button1_Click(object sender, EventArgs e)
         {
-            /*
-            test data
-            S->AB
-            S->CB
-            A->BC
-            A->y
-            B->x
-            C->AS
-            C->AB
-            C->y
-		
-            yxyxx	(in language)
-                */
-
             string word = tboxword.Text;
             string[] grammar = Regex.Split(tboxgrammar.Text, "\r\n");
             int width = word.Length;

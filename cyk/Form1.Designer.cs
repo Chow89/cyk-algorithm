@@ -33,6 +33,8 @@
             this.label2 = new System.Windows.Forms.Label();
             this.tboxword = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
+            this.btnload = new System.Windows.Forms.Button();
+            this.btnsave = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // tboxgrammar
@@ -41,7 +43,7 @@
             this.tboxgrammar.Location = new System.Drawing.Point(12, 51);
             this.tboxgrammar.Multiline = true;
             this.tboxgrammar.Name = "tboxgrammar";
-            this.tboxgrammar.Size = new System.Drawing.Size(294, 138);
+            this.tboxgrammar.Size = new System.Drawing.Size(213, 138);
             this.tboxgrammar.TabIndex = 0;
             // 
             // label1
@@ -52,8 +54,8 @@
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(294, 39);
             this.label1.TabIndex = 1;
-            this.label1.Text = "Enter the grammar of your context-free language in Chomsky normal form! (i.e. X->" +
-                "YZ, X->a) Please use for every grammar rule a single line.";
+            this.label1.Text = "Enter the grammar of your context-free language in Chomsky normal form (i.e. X->Y" +
+                "Z, X->a)! Please use a single line for every grammar rule.";
             // 
             // label2
             // 
@@ -81,18 +83,40 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
+            // btnload
+            // 
+            this.btnload.Location = new System.Drawing.Point(231, 51);
+            this.btnload.Name = "btnload";
+            this.btnload.Size = new System.Drawing.Size(75, 23);
+            this.btnload.TabIndex = 5;
+            this.btnload.Text = "Load";
+            this.btnload.UseVisualStyleBackColor = true;
+            this.btnload.Click += new System.EventHandler(this.btnload_Click);
+            // 
+            // btnsave
+            // 
+            this.btnsave.Location = new System.Drawing.Point(231, 80);
+            this.btnsave.Name = "btnsave";
+            this.btnsave.Size = new System.Drawing.Size(75, 23);
+            this.btnsave.TabIndex = 6;
+            this.btnsave.Text = "Save";
+            this.btnsave.UseVisualStyleBackColor = true;
+            this.btnsave.Click += new System.EventHandler(this.btnsave_Click);
+            // 
             // btncheck
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(318, 264);
+            this.Controls.Add(this.btnsave);
+            this.Controls.Add(this.btnload);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.tboxword);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.tboxgrammar);
             this.Name = "btncheck";
-            this.Text = "Form1";
+            this.ShowIcon = false;
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -105,6 +129,8 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox tboxword;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnload;
+        private System.Windows.Forms.Button btnsave;
     }
 }
 
